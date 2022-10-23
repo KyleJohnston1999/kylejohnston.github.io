@@ -1,0 +1,18 @@
+@import '../../stylesheet.scss';
+
+.ListItem {
+    color: $secondary;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    &:hover {
+        background-color: $secondary-tint
+    }
+
+    .selected {
+        background-color: $secondary;
+        color: $primary;
+    }
+}
+

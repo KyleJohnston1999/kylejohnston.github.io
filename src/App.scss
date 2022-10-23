@@ -1,5 +1,12 @@
+@import './stylesheet.scss';
+
 .App {
-  text-align: center;
+  display: flex;
+}
+
+.body {
+  width: 100%;
+  background-color: $secondary;
 }
 
 .App-logo {
@@ -20,7 +27,6 @@ img {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
