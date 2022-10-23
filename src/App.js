@@ -1,11 +1,12 @@
 import logo from './doge-construction.png';
 import Navbar from './components/navbar/navbar';
 import './App.scss';
+import SideBar from './components/side-bar/side-bar';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <SideBar></SideBar>
       <div class="body">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './navbar.module.scss';
-import list from './navbar.config';
-import ListItem from '../list-item/list-item';
 
 
-const listItems = list.items.map(item => <ListItem label={ item.text } />)
 
-const Navbar = () => (
+const Navbar = (props) => (
   <div className={styles.Navbar}>
-    { listItems }
+    { props.items }
   </div>
 );
 
