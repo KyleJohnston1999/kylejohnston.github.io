@@ -1,17 +1,25 @@
 module.exports = {
     bars: [
         [
+            // {
+            //     text: 'about',
+            //     href: '/about'
+            // },
+            // {
+            //     text: 'qualifications',
+            //     href: '/qualifications'
+            // },
+            // {
+            //     text: 'contact',
+            //     href: '/contact'
+            // }s
             {
-                text: 'about',
-                href: '/about'
+                text: 'Goal 1',
+                href: '/goal-one'
             },
             {
-                text: 'qualifications',
-                href: '/qualifications'
-            },
-            {
-                text: 'contact',
-                href: '/contact'
+                text: 'Goal 2',
+                href: '/goal-two'
             }
         ]
         // [
