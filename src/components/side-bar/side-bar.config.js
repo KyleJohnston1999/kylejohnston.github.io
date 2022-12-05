@@ -2,35 +2,31 @@ module.exports = {
     bars: [
         [
             {
-                text: 'About me',
-                href: ''
+                text: 'about',
+                href: '/about'
             },
             {
-                text: 'Qualifications',
-                href: ''
+                text: 'qualifications',
+                href: '/qualifications'
             },
             {
-                text: 'Interests',
-                href: ''
-            },
-            {
-                text: 'Contact me',
-                href: ''
-            }
-        ],
-        [
-            {
-                text: 'LinkedIn',
-                href: ''
-            },
-            {
-                text: 'Facebook',
-                href: ''
-            },
-            {
-                text: 'Instagram',
-                href: ''
+                text: 'contact',
+                href: '/contact'
             }
         ]
+        // [
+        //     {
+        //         text: 'LinkedIn',
+        //         href: 'asd'
+        //     },
+        //     {
+        //         text: 'Facebook',
+        //         href: 'dfh'
+        //     },
+        //     {
+        //         text: 'Instagram',
+        //         href: 'dfg'
+        //     }
+        // ]
     ]
 }

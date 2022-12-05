@@ -1,33 +1,41 @@
 @import './stylesheet.scss';
 
 .App {
-  display: flex;
+  // display: flex;
+  height: 100vh;
+  background-color: $primary;
 }
 
 .body {
   width: 100%;
-  background-color: $secondary;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-
-
+  // background-color: $secondary;
+  
 }
 
 img {
   background: none;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+  .divider {
+    animation: divider-animation infinite 3s linear;
   }
 }
 
+.divider {
+  // background-image: linear-gradient(to right, red, yellow);
+  // background-image: -webkit-linear-gradient(to right, red, yellow);
+  padding: 1px;
+  // height: 1px;
+  color: white;
+
+  width: 100vh;
+}
+
+
 .App-header {
-  min-height: 100vh;
+  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,10 +48,26 @@ img {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  0% {transform: scale(1) rotate(0deg);}
-  25% {transform: scale(0.5) rotate(90deg);}
-  50% {transform: scale(1) rotate(0deg);}
-  75% {transform: scale(0.5) rotate(-90deg);}
-  100% {transform: scale(1) rotate(0deg);}
-}
+// @keyframes divider-animation {
+//   0% {
+//     background-image: linear-gradient(to right, white, black,black);
+//     background-image: -webkit-linear-gradient(to right, white, black,black);
+//   }
+//   25% {
+//     background-image: linear-gradient(to right, black, white,black);
+//     background-image: -webkit-linear-gradient(to right, black, white, black)
+//   }
+//   50% {
+//     background-image: linear-gradient(to right, black, black,white);
+//     background-image: -webkit-linear-gradient(to right, black, black,white);
+//   }
+//   75% {
+//     background-image: linear-gradient(to right, black, white,black);
+//     background-image: -webkit-linear-gradient(to right, black, white, black)
+//   }
+//   100% {
+//     background-image: linear-gradient(to right, white, black,black);
+//     background-image: -webkit-linear-gradient(to right, white, black,black);
+//   }
+//   // 100% {transform: scale(1) rotate(0deg);}
+// }

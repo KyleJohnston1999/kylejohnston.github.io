@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './side-bar.module.css';
+import styles from './side-bar.module.scss';
 import ListItem from '../list-item/list-item';  
 import list from './side-bar.config';
 import Navbar from '../navbar/navbar';
 
 
-const navBars = list.bars.map(navbar => {
-return <Navbar items={ navbar.map(item => { return <ListItem label={ item.text } /> }) } />
+const navBars = list.bars.map((navbar,index)=> {
+return <Navbar key={index} items={ navbar.map(listitem => { return <ListItem key={ listitem.text } item={ listitem } /> }) } />
 });
 
 
