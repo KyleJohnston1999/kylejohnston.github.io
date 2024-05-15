@@ -1,0 +1,46 @@
+@import '../../styles/Styles.scss';
+
+.InfoBoard {
+    @include border;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    
+    &::before {
+        z-index: 0;
+        position: absolute;
+        content: '';
+        background-color: $c-primary;
+        border-radius: 50%;
+        display: inline-block;
+        animation: frame-transition 2s linear 1 normal forwards;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+}
+
+
+
+
+@keyframes frame-transition {
+    0% {
+        height: 0px;
+        width: 0px;
+        left: -200px;
+        top: -200px;
+
+    }
+    50% {
+        height: 1500px;
+        width: 1500px;
+        left: 30%;
+        top: 30%;
+    }
+    100% {
+        height: 0;
+        width: 0;
+        left: 100%;
+        top: 100%;
+    }
+}

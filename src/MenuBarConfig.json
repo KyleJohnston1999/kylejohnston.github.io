@@ -1,0 +1,13 @@
+{
+    "menuBarItems": [
+        {
+            "title": "home"
+        },
+        {
+            "title": "about"
+        },
+        {
+            "title": "contact"
+        }
+    ]
+}

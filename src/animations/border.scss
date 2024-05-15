@@ -1,0 +1,51 @@
+
+@keyframes spin-movement {
+    0% {
+        transform: rotate(0deg) 
+            translateX(45px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg) 
+            translateX(45px) rotate(360deg);
+    }
+}
+
+@keyframes border-pulse {
+    0% {
+        border: 1px solid transparent;
+    }
+
+    50% {
+        border: 1px solid grey;
+    }
+}
+
+@mixin border-spin ($spin-color) {
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:  transparent;
+        content: '';
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+    }
+
+    &:hover {
+       
+        animation: border-pulse 2s infinite linear, float 4s infinite;
+        &::after {
+            animation: spin-movement 2s infinite linear;
+            height: 4px;
+            width: 4px;
+            color: $spin-color;
+            background-color:  $spin-color;
+            
+        }
+        
+    }
+}
+

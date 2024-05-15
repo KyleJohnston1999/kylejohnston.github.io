@@ -1,0 +1,14 @@
+@import '../../styles/Styles.scss';
+.InfoHeading {
+    text-align: left;
+
+    h1 {
+        font-size: var(--font-xlarge);
+        font-weight: 300;
+        margin: 0;
+        line-height: var(--line-xlarge);
+        strong {
+            font-weight: 900;
+        }
+    }
+}

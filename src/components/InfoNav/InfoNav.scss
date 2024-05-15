@@ -1,0 +1,22 @@
+@import '../../styles/Styles.scss';
+@import '../../animations/highlight.scss';
+
+.InfoNav {
+    @include border;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.Indicator {
+    @include highlight-indicator-y('.InfoNavItem', 4);
+}
+
+@include mobile {
+
+    
+}

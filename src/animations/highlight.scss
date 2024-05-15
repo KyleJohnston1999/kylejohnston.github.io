@@ -1,0 +1,140 @@
+@import '../styles/Styles.scss';
+
+$background-color: $c-secondary;
+$indicator-color: $c-primary;
+$transition-speed: 1.3s;
+
+@mixin highlight-indicator-x($child-selector, $menu-items) {
+
+    $width: (100/$menu-items) * 1%;
+    $menu-items-loop-offset: $menu-items - 1;
+
+
+    #{$child-selector} {
+        transition: all 250ms;
+        width: $width;
+      &:last-child {
+        &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          pointer-events: none;
+          transition: left #{$transition-speed} ease;
+        }
+        &:after {
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          width: $width;
+          border-radius: 80px;
+          background-color: $indicator-color;
+          z-index: -1;
+        }
+  
+  
+      }
+  
+    }
+  
+    @for $i from 1 through $menu-items-loop-offset {
+      #{$child-selector}:nth-child(#{$i}).Active ~  #{$child-selector}:last-child:after {
+        left:($width*$i)-$width;
+      }
+      #{$child-selector}:nth-child(#{$i}).Active ~  #{$child-selector}:last-child:before
+      {
+        left:($width*$i)+($width/2)-$width;
+      }
+    }
+  
+    @for $i from 1 through $menu-items-loop-offset {
+        #{$child-selector}:nth-child(#{$i}):hover ~  #{$child-selector}:last-child:after {
+        left:($width*$i)-$width !important;
+      }
+  
+      #{$child-selector}:nth-child(#{$i}):hover ~  #{$child-selector}:last-child:before{
+        left:($width*$i)+($width/2)-$width !important;
+      }
+        
+    }
+      
+    #{$child-selector} {
+        &:last-child {
+        &:hover, &.Active {
+            &:before {
+            left: (100%-$width)+($width/2) !important;
+            }
+            &:after{
+            left: 100%-$width !important;
+            }
+        }        
+        }
+    }
+}
+
+@mixin highlight-indicator-y($child-selector, $menu-items) {
+    z-index: 0;
+
+    $height: (100/$menu-items) * 1%;
+    $menu-items-loop-offset: $menu-items - 1;
+
+
+    #{$child-selector} {
+        transition: all 250ms;
+        height: $height;
+        &:last-child {
+            &:before, &:after {
+            content: '';
+                display: block;
+                position: absolute;
+                pointer-events: none;
+                transition: top #{$transition-speed} ease;
+            }
+            &:after {
+                top: 0;
+                left: 0;
+                height: $height;
+                width: 100%;
+                border-radius: 80px;
+                background-color: $indicator-color;
+                z-index: -1;
+            }
+    
+    
+        }
+  
+    }
+  
+    @for $i from 1 through $menu-items-loop-offset {
+      #{$child-selector}:nth-child(#{$i}).Active ~  #{$child-selector}:last-child:after {
+        top:($height*$i)-$height;
+      }
+      #{$child-selector}:nth-child(#{$i}).Active ~  #{$child-selector}:last-child:before
+      {
+        top:($height*$i)+($height/2)-$height;
+      }
+    }
+  
+    @for $i from 1 through $menu-items-loop-offset {
+        #{$child-selector}:nth-child(#{$i}):hover ~  #{$child-selector}:last-child:after {
+        top:($height*$i)-$height !important;
+      }
+  
+      #{$child-selector}:nth-child(#{$i}):hover ~  #{$child-selector}:last-child:before{
+        top:($height*$i)+($height/2)-$height !important;
+      }
+        
+    }
+      
+    #{$child-selector} {
+        &:last-child {
+        &:hover, &.Active {
+            &:before {
+                top: (100%-$height)+($height/2) !important;
+            }
+            &:after{
+                top: 100%-$height !important;
+            }
+        }        
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "pageContent":  
+        {
+            "pageTitle": {
+                "titleLight": "get into",
+                "titleHeavy": "contact"
+            },
+            "pageBody": [{
+              "title": "LinkedIn",
+              "link": "https://www.linkedin.com/in/kylejohnston1999",
+              "body":  "Feel free to reach out to me on LinkedIn!"
+            }
+            
+            ],
+            "reverse": false
+        }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/Styles.scss';
+
+.Contact {
+    z-index: 1;
+    @include base-page;
+    justify-content: start;
+    .Body {
+        // margin-top: 12px;
+        display: flex;
+        gap: 120px;
+        > * {
+            flex: 1;
+        }
+    }
+
+    @include mobile {
+
+        justify-content: space-around;
+        align-items: center;
+        
+        .Body {
+            gap: 60px;
+        }
+    
+    }
+}
+
+.Wave {
+    position: absolute;
+}

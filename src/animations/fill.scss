@@ -1,0 +1,52 @@
+@mixin fillOnHover ($fill-color, $text-color) {
+    &::after {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 8px;
+        content: '';
+        width: 0%;
+        height: 0;
+        background-color: $fill-color;
+        transition: all 350ms;
+    }
+
+    &:hover {
+        color: $text-color;
+        // cursor: pointer;
+
+        &::after {
+            height: 100%;
+            width: 100%;
+        }
+        
+    }
+}
+
+@mixin fillFromSide ($fill-color, $text-color) {
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        // transform: translateY(-50%);
+        border-radius: 8px;
+        content: '';
+        width: 0%;
+        height: 100%;
+        background-color: $fill-color;
+        transition: all 350ms;
+    }
+
+    &:hover {
+        color: $text-color;
+        cursor: pointer;
+
+        &::after {
+            width: 100%;
+        }
+        
+    }
+}
