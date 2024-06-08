@@ -7,6 +7,8 @@ const BlobAnimation: FC<BlobAnimationProps> = () => {
   useEffect(() => {
     const tween: any = kute.fromTo('#blob-start', {path: '#blob-start'}, {path: '#blob-end'}, {repeat: 999, duration: 10000, yoyo: true});
     tween.start();
+
+    return () => tween.stop();
   },[])
 
   return (

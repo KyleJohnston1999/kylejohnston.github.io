@@ -33,11 +33,13 @@
     --line-medium: 1rem;
     --line-small: 1.25rem;
     --line-xsmall: 1.25rem;
+  }
 }
+
+
+#root {
+  background-color: #F5F5F5;
 }
-
-
-
 
 .App {
   background-color: #F5F5F5;
@@ -50,6 +52,15 @@
   .Wave {
     position: absolute;
     bottom: -5px;
+    left: 0;
+    height: fit-content;
+    z-index: 0;
+    width: 100%;
+  }
+
+  > .Blob{
+    position: absolute;
+    bottom: 0;
     left: 0;
     height: fit-content;
     z-index: 0;

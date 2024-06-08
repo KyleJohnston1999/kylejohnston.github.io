@@ -43,7 +43,7 @@ const About: FC<AboutProps> = ({onEnter, config}) =>
     if (ref.current) {
       observer.observe(ref.current);
     }
-    
+    return () => observer.disconnect()
   }, [])
 
   const arrowClick = (direction: number) => {

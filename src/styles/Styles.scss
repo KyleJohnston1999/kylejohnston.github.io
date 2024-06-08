@@ -25,7 +25,7 @@ $mobile-breakpoint: 1200px;
 @mixin border {
     border: 5px solid $c-secondary;
     border-radius: 80px;
-    box-shadow: 5px 5px;
+    // box-shadow: 5px 5px;
 }
 
 @mixin base-page {
@@ -35,16 +35,21 @@ $mobile-breakpoint: 1200px;
     justify-content: center;
     height: 100vh;
     padding: 0 10%;
-    opacity: 0.5;
     max-width: $max-width;
     min-width: $min-width;
     box-sizing: border-box;
-    filter: blur(5px);
     transition: all 1s;
-    &.Show {
-        opacity: 1; 
-        filter: none;
+
+    @include desktop {
+        opacity: 0.5;
+        filter: blur(5px);
+
+        &.Show {
+            opacity: 1; 
+            filter: none;
+        }
     }
+    
     .Body {
 
     }
@@ -71,15 +76,7 @@ $mobile-breakpoint: 1200px;
         }
 
         .Arrows {
-            // display: none;
-            .Arrow {
-                height: 32px;
-            }
-            
-            img {
-                height: 100%;
-
-            }
+            display: none;
         }
     }
 }

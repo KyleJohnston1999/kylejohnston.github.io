@@ -16,6 +16,8 @@ const Blob: FC<BlobProps> = () => {
     const tween: any = kute.fromTo(startSelector, {path: startSelector}, {path: endSelector}, {repeat: 999, duration: 3000, yoyo: true});
 
     tween.start();
+
+    return () => tween.stop();
   },[])
 
   return (

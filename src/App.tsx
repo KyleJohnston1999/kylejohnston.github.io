@@ -10,6 +10,7 @@ import AboutPageConfig from './pageConfigs/AboutContentConfig.json';
 import ContactPageConfig from './pageConfigs/ContactContentConfig.jsx';
 import Contact from './pages/Contact/Contact';
 import Wave from './assets/Wave';
+import Blob from './components/Blob/Blob';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         return <About onEnter={pageEnter} config={pageConfig} key={index}/>
       })}
       <Contact onEnter={pageEnter} config={ContactPageConfig.pageContent}/>
-      <Wave />
+      {/* <Wave /> */}
+      <Blob />
       <MenuBar config={MenuBarConfig} index={menuBarIndex} setIndex={(index) => {setMenuBarIndex(index)}}/>
     </div>
   );

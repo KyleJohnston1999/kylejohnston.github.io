@@ -4,6 +4,7 @@ import Logo from '../../components/Logo/Logo';
 import TitleBody from '../../components/TitleBody/TitleBody';
 import './Home.scss';
 import Arrow from '../../components/Arrow/Arrow';
+import Blob from '../../components/Blob/Blob';
 
 
 interface HomeProps {
@@ -44,6 +45,8 @@ const Home: FC<HomeProps> = ({onEnter, config}) =>
           setIsIntersecting(false);
         }
       });
+
+      return () => observer.disconnect();
     }, {threshold: 0.5});
     if (ref.current) {
       observer.observe(ref.current);
@@ -55,7 +58,7 @@ const Home: FC<HomeProps> = ({onEnter, config}) =>
   <div className={`Home ${isIntersecting && 'Show'}`} ref={ref}>
     <div className='Body'>
       <TitleBody config={config}/>
-      <Logo />
+      <Blob />
     </div>
     <div className="Arrows">
       <Arrow onClick={() => arrowClick(1)} pointUp={false}/>
