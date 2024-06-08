@@ -29,7 +29,7 @@ function App() {
       })}
       <Contact onEnter={pageEnter} config={ContactPageConfig.pageContent}/>
       {/* <Wave /> */}
-      <Blob />
+      {/* <Blob /> */}
       <MenuBar config={MenuBarConfig} index={menuBarIndex} setIndex={(index) => {setMenuBarIndex(index)}}/>
     </div>
   );
