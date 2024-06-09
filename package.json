@@ -20,7 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "npm run build; git add build; git commit -m \"chore(build)\"; git push",
+    "deploy-build": "npm run build; git add build; git commit -m \"chore(build)\"; git push",
+    "deploy": "npm run build; git add .; git commit -m \"chore(build)\"; git push",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
