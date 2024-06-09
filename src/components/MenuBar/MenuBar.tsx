@@ -1,7 +1,5 @@
-import React, { FC, useEffect, useState } from 'react';
-import Button from '../Button/Button';
+import { FC } from 'react';
 import './MenuBar.scss';
-// import Config from './MenuBar.json';
 import MenuBarItem from '../MenuBarItem/MenuBarItem';
 import IMenuBar from './IMenuBar';
 interface MenuBarProps {

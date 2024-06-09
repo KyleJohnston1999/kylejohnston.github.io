@@ -3,6 +3,8 @@ import './Contact.scss';
 import Arrow from '../../components/Arrow/Arrow';
 import InfoDescription from '../../components/InfoDescription/InfoDescription';
 import InfoHeading from '../../components/InfoHeading/InfoHeading';
+import { arrowClick, includeUpArrowFunctionality } from '../../shared';
+import Blob from '../../components/Blob/Blob';
 
 interface ContactProps {
   onEnter: (i: number) => void,
@@ -14,10 +16,7 @@ const Contact: FC<ContactProps> = ({onEnter, config}) => {
   const ref = useRef(null);
   
   const keydown = (event: KeyboardEvent) => {
-    if (event.key ==='ArrowUp') {
-      event.preventDefault();
-      arrowClick(-1);
-    }
+    includeUpArrowFunctionality(event)
   }
 
   useEffect(()=> {
@@ -38,13 +37,6 @@ const Contact: FC<ContactProps> = ({onEnter, config}) => {
     }
     
   }, [])
-
-  const arrowClick = (direction: number) => {
-    if (!window.visualViewport) return;
-    const currentPage = window.visualViewport ? Math.floor(window.scrollY / window.visualViewport.height) : 0;
-    const top = (currentPage+(direction * 1))*window.visualViewport.height;
-    window.scrollTo({top: top, behavior: 'smooth'});  
-  }
   
   return (
       <div className={`Contact ${isIntersecting && 'Show'}`} ref={ref}>
@@ -53,8 +45,9 @@ const Contact: FC<ContactProps> = ({onEnter, config}) => {
             <>
               <InfoHeading content={config.pageTitle}/>
               <InfoDescription items={config.pageBody}/>
+              <Blob />
             </>
-           {/* <InfoBlob /> */}
+           
         </div>
         </div>
         <div className="Arrows">

@@ -5,11 +5,11 @@ import InfoBlob from '../../components/Blob/Blob';
 import TitleBody from '../../components/TitleBody/TitleBody';
 import InfoHeading from '../../components/InfoHeading/InfoHeading';
 import InfoDescription from '../../components/InfoDescription/InfoDescription';
+import { arrowClick, includeDownArrowFunctionality, includeUpArrowFunctionality } from '../../shared';
 interface AboutProps {
   onEnter: (i: number) => void,
   config: any
 }
-
 
 const About: FC<AboutProps> = ({onEnter, config}) => 
 {
@@ -18,13 +18,8 @@ const About: FC<AboutProps> = ({onEnter, config}) =>
   const ref = useRef(null);
   
   const keydown = (event: KeyboardEvent) => {
-    if (event.key === 'ArrowDown') {
-      event.preventDefault();
-      arrowClick(1);
-    } else if (event.key ==='ArrowUp') {
-      event.preventDefault();
-      arrowClick(-1);
-    }
+    includeUpArrowFunctionality(event)
+    includeDownArrowFunctionality(event)
   }
 
   useEffect(()=> {
@@ -46,13 +41,6 @@ const About: FC<AboutProps> = ({onEnter, config}) =>
     return () => observer.disconnect()
   }, [])
 
-  const arrowClick = (direction: number) => {
-    if (!window.visualViewport) return;
-    const currentPage = window.visualViewport ? Math.floor((window.scrollY + 50) / window.visualViewport.height) : 0;
-    const top = (currentPage+(1*direction))*window.visualViewport.height;
-    window.scrollTo({top: top, behavior: 'smooth'});  
-  }
-  
   return (
     <div className={`About ${isIntersecting && 'Show'}`} ref={ref}>
         <div className={`Body ${config.reverse && 'Reverse'}`}>
@@ -66,8 +54,6 @@ const About: FC<AboutProps> = ({onEnter, config}) =>
           <Arrow onClick={() => arrowClick(1)} pointUp={false}/>
           <Arrow onClick={() => arrowClick(-1)} pointUp={true}/>
         </div>
-  
-       
     </div>
   );
 }

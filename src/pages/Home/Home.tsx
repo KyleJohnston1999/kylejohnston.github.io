@@ -5,6 +5,7 @@ import TitleBody from '../../components/TitleBody/TitleBody';
 import './Home.scss';
 import Arrow from '../../components/Arrow/Arrow';
 import Blob from '../../components/Blob/Blob';
+import { includeDownArrowFunctionality } from '../../shared/index'
 
 
 interface HomeProps {
@@ -23,12 +24,8 @@ const Home: FC<HomeProps> = ({onEnter, config}) =>
  {
 
   const keydown = (event: KeyboardEvent) => {
-    if (event.key === 'ArrowDown') {
-      event.preventDefault();
-      arrowClick(1);
-    }
+    includeDownArrowFunctionality(event)
   }
-
 
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef(null);

@@ -7,7 +7,7 @@
             },
             "pageBody": [{
               "title": "Hometown",
-              "body": "I was born and raised in Port Elizabeth. I loved growing up in PE, with its peaceful nature and atmosphere. "  
+              "body": "I was born and raised in Port Elizabeth. I loved growing up in PE, with its peaceful nature and atmosphere."  
             },
             {
                 "title": "Current Residence",
@@ -27,7 +27,7 @@
             },
             {
               "title": "Mental Stimulation",
-              "body": "I enjoy gaming with friends (CSGO and Dota, mainly), listening to music and reading books / blogs relating to my craft. I also love a good series."  
+              "body": "I enjoy gaming with friends (CSGO and Dota, mainly), listening to music and reading books / blogs relating to my craft. I also love a good series and I am a bit too into LEGO."  
             }],
             "reverse": true
         },
@@ -38,11 +38,11 @@
             },
             "pageBody": [{
               "title": "Tech Stacks",
-              "body": "Most of my experience involve the big three: JS, HTML and CSS. I also have experience with React and Angular. On the backend side, I have worked with Node, Spring, and a bit of .NET.  On the cloud side, I familiar with various AWS services."  
+              "body": "Most of my experience involve React, JS, HTML, CSS, and a bit of Angular. On the backend side, I have worked with Node, Spring, and .NET.  With regards to cloud, I have some experience with various AWS services, but I hope to get more experience in this area."  
             },
             {
               "title": "Practical Experience",
-              "body": "Maintaining and further developing one of South Africa's largest classifieds sites, with SEO and user experience being crucial aspects."  
+              "body": "Helped further develop one of South Africa's largest classifieds sites, with SEO and user experience being crucial aspects. More recently, I've been working on auditing software for one of the world's largest auditing firms."  
             }],
             "reverse": false
         }
